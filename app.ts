@@ -1,4 +1,17 @@
-let message: string = "Helpe me, Obi-Wan Kenobi. You're my only hope!"
+import { Spacecraft, ContainerShip } from "./base-ships";
+import { MilleniumFalcon } from "./starfighters";
+
+let ship = new Spacecraft('hyperdrive')
+ship.jumpIntoHyperspace()
+
+let falcon = new MilleniumFalcon()
+falcon.jumpIntoHyperspace()
+
+
+let goodForTheJob = ( ship: ContainerShip ) => ship.cargoContainers > 2
+console.log(  `Is falcon good for the job? ${goodForTheJob( falcon ) ? 'YES' : 'NO' }` )
+
+/*let message: string = "Helpe me, Obi-Wan Kenobi. You're my only hope!"
 console.log( message )
 let episode: number = 4
 console.log( 'This is episose '+episode )
@@ -24,4 +37,8 @@ function inc(speed: number, inc: number = 1): number {
 }
 
 console.log(`inc(5,1) = ${inc(5,1)}`)
-console.log(`inc(5) = ${inc(5)}`)
+console.log(`inc(5) = ${inc(5)}`)*/
+
+
+
+
